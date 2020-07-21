@@ -1,4 +1,5 @@
-import { ColDefUtil } from 'ag-grid-community';
+// import { ColDefUtil } from 'ag-grid-community';
+const ColDefUtil = require("ag-grid-community").ColDefUtil;
 var AgGridColumn = /** @class */ (function () {
     function AgGridColumn() {
     }
@@ -47,4 +48,5 @@ var AgGridColumn = /** @class */ (function () {
     };
     return AgGridColumn;
 }());
-export { AgGridColumn };
+// export { AgGridColumn };
+module.exports = { AgGridColumn };

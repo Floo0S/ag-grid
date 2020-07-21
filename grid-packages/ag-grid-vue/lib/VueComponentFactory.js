@@ -1,4 +1,5 @@
-import Vue from 'vue';
+// import Vue from 'vue';
+const Vue = require("vue").Vue;
 var VueComponentFactory = /** @class */ (function () {
     function VueComponentFactory() {
     }
@@ -52,4 +53,5 @@ var VueComponentFactory = /** @class */ (function () {
     };
     return VueComponentFactory;
 }());
-export { VueComponentFactory };
+// export { VueComponentFactory };
+module.exports = { VueComponentFactory };

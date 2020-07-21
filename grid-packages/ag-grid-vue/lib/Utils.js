@@ -1,5 +1,7 @@
-import { ComponentUtil } from 'ag-grid-community';
-export var getAgGridProperties = function () {
+// import { ComponentUtil } from 'ag-grid-community';
+const ComponentUtil = require("ag-grid-community").ComponentUtil;
+
+exports.getAgGridProperties = function () {
     var props = {
         gridOptions: {
             default: function () {

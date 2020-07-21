@@ -17,11 +17,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import { Bean, ComponentUtil, Grid } from 'ag-grid-community';
-import { VueFrameworkComponentWrapper } from './VueFrameworkComponentWrapper';
-import { getAgGridProperties } from './Utils';
-import { AgGridColumn } from './AgGridColumn';
+// import { Component, Prop, Vue } from 'vue-property-decorator';
+// import { Bean, ComponentUtil, Grid } from 'ag-grid-community';
+// import { VueFrameworkComponentWrapper } from './VueFrameworkComponentWrapper';
+// import { getAgGridProperties } from './Utils';
+// import { AgGridColumn } from './AgGridColumn';
+
+const Component = require("vue-property-decorator").Component;
+const Prop = require("vue-property-decorator").Prop;
+const Vue = require("vue-property-decorator").Vue;
+
+const Bean = require("ag-grid-community").Bean;
+const ComponentUtil = require("ag-grid-community").ComponentUtil;
+const Grid = require("ag-grid-community").Grid;
+
+const VueFrameworkComponentWrapper = require("./VueFrameworkComponentWrapper").VueFrameworkComponentWrapper;
+
+const getAgGridProperties = require("./Utils").getAgGridProperties;
+
+const AgGridColumn = require("./AgGridColumn").AgGridColumn;
+
+
 var _a = getAgGridProperties(), props = _a[0], watch = _a[1], model = _a[2];
 var AgGridVue = /** @class */ (function (_super) {
     __extends(AgGridVue, _super);
@@ -191,4 +207,5 @@ var AgGridVue = /** @class */ (function (_super) {
     ], AgGridVue);
     return AgGridVue;
 }(Vue));
-export { AgGridVue };
+// export { AgGridVue };
+module.exports = { AgGridVue };
